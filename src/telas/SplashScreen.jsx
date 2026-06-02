@@ -8,11 +8,7 @@ import {
   SafeAreaView
 } from 'react-native';
 
-import { useNavigation } from '@react-navigation/native';
-export default function SplashScreen() {
-
-  const navigation = useNavigation();
-
+export default function SplashScreen({navigation}) {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
@@ -38,7 +34,7 @@ export default function SplashScreen() {
         <TouchableOpacity
           style={styles.button}
           activeOpacity={0.7}
-          onPress={() => navigation.navigate('Home')}
+          onPress={() => navigation.navigate("Cadastro")}
         >
           <Text style={styles.buttonText}>Acessar</Text>
         </TouchableOpacity>
